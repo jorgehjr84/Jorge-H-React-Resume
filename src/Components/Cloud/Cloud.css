@@ -1,4 +1,7 @@
 .Cloud {
      background: url('../../assets/cloud.png') no-repeat;
+     width: 12em;
      height: 10em;
+     position: relative;
+     top: 2em;
 }

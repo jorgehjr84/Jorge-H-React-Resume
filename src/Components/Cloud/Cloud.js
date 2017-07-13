@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import './Cloud.css';
 
-class Cloud extends Component {
+class Cloud extends Component {   
     render() {
         return (
-            <div className="Cloud"></div>
+            <div className="Cloud"
+            style={{left: this.props.left + 'em'}}></div>
         );
     } 
 }

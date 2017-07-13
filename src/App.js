@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 
 import Cloud from './Components/Cloud/Cloud';
+import StartGame from './Components/StartGame/StartGame';
 
 class App extends Component {
   constructor() {
@@ -28,6 +29,7 @@ class App extends Component {
   render() {  
     return (
       <div tabIndex="0" className="App" onKeyDown={this.handleArrowKeys}>
+        <StartGame />
         <Cloud left={this.state.left}/>
       </div>
     );

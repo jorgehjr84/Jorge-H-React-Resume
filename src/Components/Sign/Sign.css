@@ -1,0 +1,9 @@
+.Sign {
+    background-color: #ecf0f1;
+    border: 2px solid #d35400;
+    display: inline-block;
+    height: 26em;
+    position: relative;
+    width: 23em;
+    z-index: 100;
+}

@@ -3,6 +3,7 @@ import './App.css';
 
 import Cloud from './Components/Cloud/Cloud';
 import StartGame from './Components/StartGame/StartGame';
+import Sign from './Components/Sign/Sign';
 
 class App extends Component {
   constructor() {
@@ -10,6 +11,8 @@ class App extends Component {
     this.state = {
       left : 1,  //Moves Clouds Right
       top: 2,
+      signLeft : 100,  //Moves Clouds Right
+      signTop: 2,
       displayButton: true  
     }
 
@@ -20,11 +23,14 @@ class App extends Component {
   handleArrowKeys(e) {
     if(e.key === 'ArrowRight') {
       this.setState({
-        left: this.state.left - 1
+        left: this.state.left - 1,
+        signLeft: this.state.signLeft - 1
+
       })
     } else if (e.key === 'ArrowLeft') {
       this.setState({
-        left: this.state.left + 1
+        left: this.state.left + 1,
+        signLeft: this.state.signLeft + 1
       })
     }
   }
@@ -55,6 +61,10 @@ class App extends Component {
           <Cloud left={this.state.left + 50}  top={this.state.top + 2}/>
           <Cloud left={this.state.left + 51}  top={this.state.top + 1}/>
         </div>
+        <div className="signs">
+          <Sign left={this.state.signLeft + 1} top={this.state.signTop + 4}/>
+        </div>
+
       </div>
     );
   } 

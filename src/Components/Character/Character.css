@@ -1,9 +1,10 @@
 .Character {
-    background: url('../../assets/walk-cycle.png');
+    background: url('../../assets/character.png') no-repeat;
+    background-size: 4em;
     width: 8%;
     height: 11em;
     position: relative;
     top: 3em;
     display: inline-block;
-    z-index: 2;   
+    z-index: 3;   
 }

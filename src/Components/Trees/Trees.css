@@ -1,9 +1,9 @@
 .Trees {
-     background: url('../../assets/tree.jpg') no-repeat;
+     background: url('../../assets/trees.png') no-repeat;
      display: inline-block;
      height: 10em;
      position: relative;
      width: 12em;
-     bottom: 7em;
-     z-index: 1;
+     bottom: 9em;
+     z-index: 2;
 }

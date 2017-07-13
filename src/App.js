@@ -6,6 +6,7 @@ import StartGame from './Components/StartGame/StartGame';
 import Sign from './Components/Sign/Sign';
 import Character from './Components/Character/Character';
 import Trees from './Components/Trees/Trees';
+import Mountains from './Components/Mountains/Mountains';
 
 import CloudData from './CloudData';
 import TreeData from './TreeData';
@@ -22,6 +23,7 @@ class App extends Component {
       signTop: 2,
       characterLeft: 10,
       treesLeft: 10,
+      mountainsLeft: 10,
       displayButton: true  
     }
 
@@ -37,7 +39,8 @@ class App extends Component {
         randoCloud2: this.state.randoCloud2 - 5,
         signLeft: this.state.signLeft - 1,
         characterLeft: this.state.characterLeft + .5,
-        treesLeft: this.state.treesLeft - 2
+        treesLeft: this.state.treesLeft - 2,
+        mountainsLeft: this.state.mountainsLeft - 2
       })
     } else if (e.key === 'ArrowLeft') {
       this.setState({
@@ -46,7 +49,8 @@ class App extends Component {
         randoCloud2: this.state.randoCloud2 + 5,
         signLeft: this.state.signLeft + 1,
         characterLeft : this.state.characterLeft - .5,
-        treesLeft: this.state.treesLeft + 2
+        treesLeft: this.state.treesLeft + 2,
+        mountainsLeft: this.state.mountainsLeft + 2
       })
     }
   }
@@ -75,6 +79,10 @@ class App extends Component {
         </div>
         <Character left={this.state.characterLeft + 1}/>
         <Trees treeData={TreeData} treeLeft={this.state.treesLeft}/>
+        <Mountains left={this.state.mountainsLeft}/>
+        <Mountains left={this.state.mountainsLeft + 40}/>
+        <Mountains left={this.state.mountainsLeft + 90}/>
+        <Mountains left={this.state.mountainsLeft + 160}/>
       </div>
     );
   } 

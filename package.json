@@ -1,12 +1,13 @@
 {
-  "name": "react-project",
+  "name": "todo-mvc",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "react-scripts": "1.0.10"
+    "react-scripts": "0.9.5"
   },
+  "devDependencies": {},
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

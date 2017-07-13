@@ -5,7 +5,7 @@ class Cloud extends Component {
     render() {
         return (
             <div className="Cloud"
-            style={{left: this.props.left + 'em'}}></div>
+            style={{left: this.props.left + 'em', top: this.props.top + 'em' }}></div>
         );
     } 
 }

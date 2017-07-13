@@ -5,6 +5,7 @@ import Cloud from './Components/Cloud/Cloud';
 import StartGame from './Components/StartGame/StartGame';
 import Sign from './Components/Sign/Sign';
 import Character from './Components/Character/Character';
+import Trees from './Components/Trees/Trees';
 
 class App extends Component {
   constructor() {
@@ -15,6 +16,7 @@ class App extends Component {
       signLeft : 100,  //Moves Clouds Right
       signTop: 2,
       characterLeft: 10,
+      treesLeft: 50,
       displayButton: true  
     }
 
@@ -27,13 +29,15 @@ class App extends Component {
       this.setState({
         left: this.state.left - 1,
         signLeft: this.state.signLeft - 1,
-        characterLeft: this.state.characterLeft + .5
+        characterLeft: this.state.characterLeft + .5,
+        treesLeft: this.state.treesLeft - 2
       })
     } else if (e.key === 'ArrowLeft') {
       this.setState({
         left: this.state.left + 1,
         signLeft: this.state.signLeft + 1,
-        characterLeft : this.state.characterLeft - .5
+        characterLeft : this.state.characterLeft - .5,
+        treesLeft: this.state.treesLeft + 2
       })
     }
   }
@@ -68,7 +72,12 @@ class App extends Component {
           <Sign left={this.state.signLeft + 1} top={this.state.signTop}/>
         </div>
         <Character left={this.state.characterLeft + 1}/>
-
+        <Trees left={this.state.treesLeft}/>
+        <Trees left={this.state.treesLeft + 5}/>
+        <Trees left={this.state.treesLeft + 50}/>
+        <Trees left={this.state.treesLeft + 100}/>
+        <Trees left={this.state.treesLeft + 200}/>
+        <Trees left={this.state.treesLeft + 250}/>
       </div>
     );
   } 

@@ -3,9 +3,16 @@ import './Trees.css';
 
 class Trees extends Component {   
     render() {
+        const trees = this.props.treeData.map((tree, i) => {
+            return (
+                <div key={i} className="Trees"
+                    style={{left: this.props.treeData[i].left + this.props.treeLeft + 'em'}}>
+                </div>    
+            )    
+        })
         return (
-            <div className="Trees"
-            style={{left: this.props.left + 'em'}}>
+            <div>
+                {trees}
             </div>
         );
     } 

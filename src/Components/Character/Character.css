@@ -1,0 +1,29 @@
+.Character {
+    background: url('../../assets/walk-cycle.png');
+    width: 8%;
+    height: 11em;
+    position: relative;
+    top: 3em;
+    display: inline-block;
+    /* -webkit-animation: walk-right 1.0s steps(4) infinite;
+    animation: walk-right 1.0s steps(4) infinite; */
+     /* -webkit-animation: move-right 4.0s steps(100) infinite;
+    animation: move-right 4.0s steps(100) infinite;  */
+}
+
+/* @keyframes walk-right  {
+    from { background-position: 0px; }
+    to {background-position: -100px}
+}
+@-webkit-keyframes walk-right  {
+    from { background-position: 0px; }
+    to {background-position: -100px}
+} */
+@keyframes move-right  {
+    from {transform: translateX(0px);}
+    to {transform: translateX(1290px);}
+}
+@-webkit-keyframes move-right  {
+    from {transform: translateX(0px);}
+    to {transform: translateX(1280px);}
+}

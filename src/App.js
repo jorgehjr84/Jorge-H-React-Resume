@@ -51,7 +51,6 @@ class App extends Component {
   }
 
   removeButton() {
-    console.log("removeButton");
     this.setState({
       displayButton: false
     })
@@ -62,9 +61,11 @@ class App extends Component {
       <div tabIndex="0" className="App" 
       onKeyDown={this.handleArrowKeys}
       onClick={this.removeButton}>
+        
         {
           this.state.displayButton ? <StartGame /> : null 
         }
+
         <div className="clouds">
           <Cloud cloudData={CloudData} left={this.state.left} />
         </div>

@@ -5,7 +5,7 @@ class Character extends Component {
     render() {
         return (
             <div className="Character"
-                style={{left: this.props.left + 'em' }}>
+                style={{left: this.props.left + 'px' }}>
             </div>
         );
     } 

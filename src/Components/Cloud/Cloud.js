@@ -1,11 +1,19 @@
 import React, { Component } from 'react';
 import './Cloud.css';
 
-class Cloud extends Component {   
+class Cloud extends Component {
     render() {
+        console.log(this.props.cloudData[1].top, '////')
+        const clouds = this.props.cloudData.map((cloud, i) => {
+            return (
+                <div className="Cloud"
+                style={{left: this.props.cloudData[i].left + this.props.left + 'em', top: this.props.cloudData[i].top + 'em' }}></div>
+            )
+        })
         return (
-            <div className="Cloud"
-            style={{left: this.props.left + 'em', top: this.props.top + 'em' }}></div>
+            <div>
+                {clouds}
+            </div>
         );
     } 
 }

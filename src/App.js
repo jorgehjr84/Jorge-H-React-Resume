@@ -7,6 +7,8 @@ import Sign from './Components/Sign/Sign';
 import Character from './Components/Character/Character';
 import Trees from './Components/Trees/Trees';
 
+import CloudData from './CloudData'
+
 class App extends Component {
   constructor() {
     super();
@@ -64,15 +66,7 @@ class App extends Component {
           this.state.displayButton ? <StartGame /> : null 
         }
         <div className="clouds">
-          <Cloud left={this.state.left}/>
-          <Cloud left={this.state.left + 1} top={this.state.top + 4}/>
-          <Cloud left={this.state.randoCloud1 + 15}  top={this.state.top + 1}/>
-          <Cloud left={this.state.left + 23}  top={this.state.top + 5}/>
-          <Cloud left={this.state.left + 25}  top={this.state.top + 3}/>
-          <Cloud left={this.state.left + 30}  top={this.state.top + 10}/>
-          <Cloud left={this.state.randoCloud1 + 44}  top={this.state.top + 7}/>
-          <Cloud left={this.state.left + 50}  top={this.state.top + 2}/>
-          <Cloud left={this.state.randoCloud2 + 51}  top={this.state.top + 1}/>
+          <Cloud cloudData={CloudData} left={this.state.left} />
         </div>
         <div className="signs">
           <Sign left={this.state.signLeft + 1} top={this.state.signTop}/>

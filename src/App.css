@@ -1,4 +1,8 @@
 
+#root {
+  height: 100%;
+}
+
 .App {
   overflow: hidden;
   max-width: 100%; 

@@ -3,7 +3,8 @@ import './App.css';
 
 import Cloud from './Components/Cloud/Cloud';
 import StartGame from './Components/StartGame/StartGame';
-import Sign from './Components/Sign/Sign';
+import Sign1 from './Components/Signs/Sign1';
+import Sign2 from './Components/Signs/Sign2';
 import Character from './Components/Character/Character';
 import Trees from './Components/Trees/Trees';
 import Mountains from './Components/Mountains/Mountains';
@@ -83,10 +84,11 @@ class App extends Component {
           <Cloud cloudData={CloudData} left={this.state.left} />
         </div>
         <div className="signs">
-          <Sign 
+          <Sign1 
           left={this.state.signLeft + 1} 
           top={this.state.signTop}
           />
+          
         </div>
         <Character left={this.state.characterLeft + 1}/>
         <Trees treeData={TreeData} treeLeft={this.state.treesLeft}/>
@@ -94,6 +96,35 @@ class App extends Component {
         <Mountains left={this.state.mountainsLeft + 40}/>
         <Mountains left={this.state.mountainsLeft + 90}/>
         <Mountains left={this.state.mountainsLeft + 160}/>
+        
+        <Sign2 
+          header="Cubic Corporation" 
+          title="Software Engineer" 
+          date="June 2017 - Present" 
+          left={this.state.signLeft + 10}
+          top={this.state.signTop}/>
+
+          <Sign2 
+          header="Medullan" 
+          title="Associate Software Developer" 
+          date="April 2016 - June 2017" 
+          left={this.state.signLeft + 15}
+          top={this.state.signTop}/>
+
+          <Sign2 
+          header="Freelance" 
+          title="Web Developer" 
+          date="November 2015 - Present" 
+          left={this.state.signLeft + 20}
+          top={this.state.signTop}/>
+
+          <Sign2 
+          header="LAV Productions LLC" 
+          title="Owner" 
+          date="August 2008 - Present" 
+          left={this.state.signLeft + 125}
+          top={this.state.signTop}/>
+        
         <Plane1 left={this.state.plane1 }/>
         <Plane2 left={this.state.plane2 }/>
       </div>

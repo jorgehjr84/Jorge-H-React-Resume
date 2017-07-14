@@ -5,7 +5,7 @@ class StartGame extends Component {
     render() {
         return (
             <div className="StartGame">
-               <button >Click Anywhere on the screen to play</button>
+               <button >Click Anywhere on the screen to play. Use the left and right arrows to move.</button>
             </div>
         );
     } 

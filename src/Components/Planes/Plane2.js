@@ -5,7 +5,7 @@ class Plane2 extends Component {
     render() {
         return (
                 <div className="Plane2"
-                style={{left: this.props.left + 'em', top: 3 + 'em' }}>
+                style={{left: this.props.left + 'em' }}>
                 </div>
         );
     } 

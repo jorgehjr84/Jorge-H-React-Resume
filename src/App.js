@@ -19,7 +19,7 @@ class App extends Component {
       top: 2,
       randoCloud1: 10,
       randoCloud2: 10,
-      signLeft : 100,  //Moves Clouds Right
+      signLeft : 90,  //Moves Clouds Right
       signTop: 2,
       characterLeft: 10,
       treesLeft: 10,
@@ -75,7 +75,10 @@ class App extends Component {
           <Cloud cloudData={CloudData} left={this.state.left} />
         </div>
         <div className="signs">
-          <Sign left={this.state.signLeft + 1} top={this.state.signTop}/>
+          <Sign 
+          left={this.state.signLeft + 1} 
+          top={this.state.signTop}
+          />
         </div>
         <Character left={this.state.characterLeft + 1}/>
         <Trees treeData={TreeData} treeLeft={this.state.treesLeft}/>

@@ -1,0 +1,21 @@
+.Plane1 {
+    background: url('../../assets/experience-plane.png') no-repeat;
+    display: inline-block;
+    height: 23em;
+    position: relative;
+    width: 35em;
+    bottom: 122em;
+    z-index: 1;
+    /*background-size: 35em;        */
+}
+.Plane2 {
+    background: url("../../assets/skills-plane.png") no-repeat;
+    display: inline-block;
+    height: 28em;
+    position: relative;
+    width: 36em;
+    bottom: 122em;
+    z-index: 1;
+    background-size: 35em;
+}
+

@@ -2,10 +2,6 @@ import React, { Component } from 'react';
 import './StartGame.css';
 
 class StartGame extends Component {   
-    constructor() {
-        super();
-    }
-
     render() {
         return (
             <div className="StartGame">

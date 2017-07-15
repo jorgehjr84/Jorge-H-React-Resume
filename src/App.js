@@ -22,7 +22,8 @@ class App extends Component {
       top: 2,
       randoCloud1: 10,
       randoCloud2: 10,
-      signLeft : 90,  //Moves Clouds Right
+      signLeft : 90,
+      experienceSignLeft: 120,  //Moves Clouds Right
       signTop: 2,
       plane1: 130,
       plane2: 400,
@@ -43,6 +44,7 @@ class App extends Component {
         randoCloud1: this.state.randoCloud1 - 5,
         randoCloud2: this.state.randoCloud2 - 5,
         signLeft: this.state.signLeft - 3,
+        experienceSignLeft: this.state.experienceSignLeft - 3,
         characterLeft: this.state.characterLeft + .5,
         treesLeft: this.state.treesLeft - 2,
         plane1: this.state.plane1 - 2,
@@ -55,6 +57,7 @@ class App extends Component {
         randoCloud1: this.state.randoCloud1 + 5,
         randoCloud2: this.state.randoCloud2 + 5,
         signLeft: this.state.signLeft + 3,
+        experienceSignLeft: this.state.experienceSignLeft + 3,
         characterLeft : this.state.characterLeft - .5,
         treesLeft: this.state.treesLeft + 2,
         plane1: this.state.plane1 + 2,
@@ -87,8 +90,7 @@ class App extends Component {
           <Sign1 
           left={this.state.signLeft + 1} 
           top={this.state.signTop}
-          />
-          
+          />          
         </div>
         <Character left={this.state.characterLeft + 1}/>
         <Trees treeData={TreeData} treeLeft={this.state.treesLeft}/>
@@ -96,35 +98,49 @@ class App extends Component {
         <Mountains left={this.state.mountainsLeft + 40}/>
         <Mountains left={this.state.mountainsLeft + 90}/>
         <Mountains left={this.state.mountainsLeft + 160}/>
-        
-        <Sign2 
+          
+        <div className="experience-signs">
+          <Sign2 
           header="Cubic Corporation" 
           title="Software Engineer" 
-          date="June 2017 - Present" 
-          left={this.state.signLeft + 10}
-          top={this.state.signTop}/>
-
+          date="June 2017 - Present"
+          skill1="React JS" 
+          skill2="Node JS" 
+          skill3="HTML" 
+          skill4="CSS" 
+          left={this.state.experienceSignLeft + 130}
+          />
           <Sign2 
           header="Medullan" 
-          title="Associate Software Developer" 
+          title="Assoc. Software Developer" 
           date="April 2016 - June 2017" 
-          left={this.state.signLeft + 15}
-          top={this.state.signTop}/>
-
+          skill1="Android and iOS Development" 
+          skill2="Angular JS" 
+          skill3="Node JS" 
+          skill4="Amazon Echo Skillskit"
+          left={this.state.experienceSignLeft + 145}
+          />
           <Sign2 
           header="Freelance" 
           title="Web Developer" 
           date="November 2015 - Present" 
-          left={this.state.signLeft + 20}
-          top={this.state.signTop}/>
-
+          skill1="Angular JS" 
+          skill2="HTML" 
+          skill3="CSS" 
+          skill4="Jquery"
+          left={this.state.experienceSignLeft + 160}
+          />
           <Sign2 
           header="LAV Productions LLC" 
           title="Owner" 
           date="August 2008 - Present" 
-          left={this.state.signLeft + 125}
-          top={this.state.signTop}/>
-        
+          skill1="Leadership Skills" 
+          skill2="Communication" 
+          skill3="Invoicing" 
+          skill4="Client Relations"
+          left={this.state.experienceSignLeft + 175}
+          />
+        </div>
         <Plane1 left={this.state.plane1 }/>
         <Plane2 left={this.state.plane2 }/>
       </div>

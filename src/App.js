@@ -10,6 +10,7 @@ import Trees from './Components/Trees/Trees';
 import Mountains from './Components/Mountains/Mountains';
 import Plane1 from './Components/Planes/Plane1';
 import City from './Components/City/City';
+import Caption from './Components/Caption/Caption';
 
 import CloudData from './CloudData';
 import TreeData from './TreeData';
@@ -32,7 +33,9 @@ class App extends Component {
       characterFacingRight: true, 
       treesLeft: 10,
       mountainsLeft: 10,
-      displayButton: true  
+      caption: 440,
+      displayButton: true,
+
     }
 
     this.handleArrowKeys = this.handleArrowKeys.bind(this);
@@ -53,7 +56,8 @@ class App extends Component {
         plane1: this.state.plane1 - 2,
         plane2: this.state.plane2 - 2,
         city: this.state.city - 2,
-        mountainsLeft: this.state.mountainsLeft - 2
+        mountainsLeft: this.state.mountainsLeft - 2,
+        caption: this.state.caption -2
       })
     } else if (e.key === 'ArrowLeft') {
       this.setState({
@@ -68,7 +72,8 @@ class App extends Component {
         plane1: this.state.plane1 + 2,
         plane2: this.state.plane2 + 2,
         city: this.state.city + 2,
-        mountainsLeft: this.state.mountainsLeft + 2
+        mountainsLeft: this.state.mountainsLeft + 2,
+        caption: this.state.caption + 2
       })
     }
   }
@@ -150,6 +155,12 @@ class App extends Component {
         </div>
         <Plane1 left={this.state.plane1 }/>
         <City left={this.state.city }/>
+        <div className="captions-container"
+        style={{left: this.state.caption + 'em'}}>
+          <Caption caption="to be continued......" />
+          <Caption caption="what are you still doing here?" />
+          <Caption caption="no seriourly, turn around, there's nothing else to see" />
+        </div>
       </div>
     );
   } 

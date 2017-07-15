@@ -23,3 +23,11 @@
 .low-mountains {
   bottom: 76em !important;
 }
+
+.captions-container {
+    height: 5em;
+    position: relative;
+    width: 617%;
+    bottom: 174em;
+    z-index: 2;
+}

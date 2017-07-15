@@ -3,10 +3,22 @@ import './Character.css';
 
 class Character extends Component {   
     render() {
+        console.log(this.props.character, ';;;;;')
         return (
-            <div className="Character"
-                style={{left: this.props.left + 'px' }}>
+            <div>
+                {
+                    this.props.character
+                    ? <div className="Character-right"
+                    style={{left: this.props.left + 'px'}}>
+                    </div>
+                    :
+                    <div className="Character-left"
+                    style={{left: this.props.left + 'px'}}>
+                    </div>
+                }
             </div>
+            
+            
         );
     } 
 }

@@ -9,7 +9,7 @@ import Character from './Components/Character/Character';
 import Trees from './Components/Trees/Trees';
 import Mountains from './Components/Mountains/Mountains';
 import Plane1 from './Components/Planes/Plane1';
-import Plane2 from './Components/Planes/Plane2';
+import City from './Components/City/City';
 
 import CloudData from './CloudData';
 import TreeData from './TreeData';
@@ -27,7 +27,9 @@ class App extends Component {
       signTop: 2,
       plane1: 130,
       plane2: 400,
+      city: 280,
       characterLeft: 10,
+      characterFacingRight: true, 
       treesLeft: 10,
       mountainsLeft: 10,
       displayButton: true  
@@ -46,9 +48,11 @@ class App extends Component {
         signLeft: this.state.signLeft - 3,
         experienceSignLeft: this.state.experienceSignLeft - 3,
         characterLeft: this.state.characterLeft + .5,
+        characterFacingRight: true,
         treesLeft: this.state.treesLeft - 2,
         plane1: this.state.plane1 - 2,
         plane2: this.state.plane2 - 2,
+        city: this.state.city - 2,
         mountainsLeft: this.state.mountainsLeft - 2
       })
     } else if (e.key === 'ArrowLeft') {
@@ -59,9 +63,11 @@ class App extends Component {
         signLeft: this.state.signLeft + 3,
         experienceSignLeft: this.state.experienceSignLeft + 3,
         characterLeft : this.state.characterLeft - .5,
+        characterFacingRight: false,
         treesLeft: this.state.treesLeft + 2,
         plane1: this.state.plane1 + 2,
         plane2: this.state.plane2 + 2,
+        city: this.state.city + 2,
         mountainsLeft: this.state.mountainsLeft + 2
       })
     }
@@ -92,7 +98,8 @@ class App extends Component {
           top={this.state.signTop}
           />          
         </div>
-        <Character left={this.state.characterLeft + 1}/>
+        <Character left={this.state.characterLeft + 1} character={this.state.characterFacingRight}
+        />
         <Trees treeData={TreeData} treeLeft={this.state.treesLeft}/>
         <Mountains left={this.state.mountainsLeft}/>
         <Mountains left={this.state.mountainsLeft + 40}/>
@@ -142,7 +149,7 @@ class App extends Component {
           />
         </div>
         <Plane1 left={this.state.plane1 }/>
-        <Plane2 left={this.state.plane2 }/>
+        <City left={this.state.city }/>
       </div>
     );
   } 

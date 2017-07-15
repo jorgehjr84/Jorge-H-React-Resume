@@ -1,5 +1,5 @@
 .Mountains {
-    background: url(/static/media/mountains.e2a50c80.png) no-repeat;
+    background: url('../../assets/mountains.png') no-repeat;
     display: inline-block;
     height: 28em;
     position: relative;

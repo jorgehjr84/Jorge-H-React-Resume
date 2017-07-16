@@ -1,5 +1,5 @@
 .StartGame {
-    width: 13%;
+    width: 18%;
     height: auto;
     position: absolute;
     left: 44%;
@@ -16,4 +16,10 @@ button {
     border: 4px solid #c0392b;
     border-radius: 8px;
     cursor: pointer;
+}
+
+@media (max-width: 658px){
+    .StartGame {
+        width: 35%;
+    }
 }

@@ -106,10 +106,13 @@ class App extends Component {
         <Character left={this.state.characterLeft + 1} character={this.state.characterFacingRight}
         />
         <Trees treeData={TreeData} treeLeft={this.state.treesLeft}/>
-        <Mountains left={this.state.mountainsLeft}/>
-        <Mountains left={this.state.mountainsLeft + 40}/>
-        <Mountains left={this.state.mountainsLeft + 90}/>
-        <Mountains left={this.state.mountainsLeft + 160}/>
+        <div className="Mountains-container">
+          <Mountains left={this.state.mountainsLeft}/>
+          <Mountains left={this.state.mountainsLeft + 40}/>
+          <Mountains left={this.state.mountainsLeft + 90}/>
+          <Mountains left={this.state.mountainsLeft + 160}/>
+        </div>
+        
           
         <div className="experience-signs">
           <Sign2 

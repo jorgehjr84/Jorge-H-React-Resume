@@ -1,18 +1,20 @@
 .Character-right {
     background: url('../../assets/character-right.png') no-repeat;
     background-size: 4em;
-    width: 8%;
+    width: 19%;
     height: 11em;
-    position: relative;
+    position: fixed;
     display: inline-block;
-    z-index: 300;   
+    bottom: -1.4em;
+    z-index: 300;
 }
 .Character-left {
     background: url('../../assets/character-left.png') no-repeat;
     background-size: 4em;
-    width: 8%;
+    width: 19%;
     height: 11em;
-    position: relative;
+    position: fixed;
     display: inline-block;
-    z-index: 300;   
+    bottom: -1.4em;
+    z-index: 300;
 }

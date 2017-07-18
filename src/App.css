@@ -59,3 +59,12 @@
     background-color: lightgrey;
     opacity: .6;
 }
+
+@media (min-width: 769px) {
+  .RightButton {
+    display: none;
+  }
+  .LeftButton {
+    display: none;
+  }
+}

@@ -4,7 +4,7 @@
     border-radius: 2em;
     display: inline-block;
     height: 26em;
-    position: relative;
+    position: absolute;
     width: 31em;
     z-index: 100;
 }

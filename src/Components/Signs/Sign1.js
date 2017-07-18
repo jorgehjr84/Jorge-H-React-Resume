@@ -4,7 +4,7 @@ import './Signs.css';
 class Sign1 extends Component {   
     render() {
         return (
-            <div>
+            
                 <div className="Sign"
                 style={{left: this.props.left + 'em', top: this.props.top + 'em' }}>
                     <h1 className="sign1-header">Jorge's Contact Info</h1>
@@ -15,7 +15,7 @@ class Sign1 extends Component {
                         <li className="sign1-l1"><a href="https://www.linkedin.com/in/jorge-hernandez-b7574068/" target="_blank" >LinkedIn : https://www.linkedin.com/in/jorge-hernandez-b7574068/</a></li>
                     </ul>                   
                 </div>
-            </div>
+            
         );
     } 
 }

@@ -98,7 +98,8 @@ class App extends Component {
           this.state.displayButton ? <StartGame /> : null 
         }
 
-        <button className="LeftButton" onClick={()=> {this.handleArrowKeys(leftArrowPressed)}}>{left}</button>
+        <button 
+        className="LeftButton" onClick={()=> {this.handleArrowKeys(leftArrowPressed)}}>{left}</button>
         <button className="RightButton" onClick={()=> {this.handleArrowKeys(rightArrowPressed)}}>{right}</button>
 
         <div className="clouds">

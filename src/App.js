@@ -37,13 +37,12 @@ class App extends Component {
       displayButton: true,
 
     }
-
     this.handleArrowKeys = this.handleArrowKeys.bind(this);
     this.removeButton = this.removeButton.bind(this);
   }
 
   handleArrowKeys(e) {
-    if(e.key === 'ArrowRight') {
+    if(e.key === 'ArrowRight' || e === 'right') {
       this.setState({
         left: this.state.left - 1,
         randoCloud1: this.state.randoCloud1 - 5,
@@ -51,7 +50,7 @@ class App extends Component {
         signLeft: this.state.signLeft - 3,
         experienceSignLeft: this.state.experienceSignLeft - 3,
         characterLeft: this.state.characterLeft + 3,
-        characterFacingRight: true,
+        characterFacingRight: true ,
         treesLeft: this.state.treesLeft - 2,
         plane1: this.state.plane1 - 2,
         plane2: this.state.plane2 - 2,
@@ -59,7 +58,7 @@ class App extends Component {
         mountainsLeft: this.state.mountainsLeft - 2,
         caption: this.state.caption -2
       })
-    } else if (e.key === 'ArrowLeft') {
+    } else if (e.key === 'ArrowLeft' || e === 'left') {
       this.setState({
         left: this.state.left + 1,
         randoCloud1: this.state.randoCloud1 + 5,
@@ -85,6 +84,11 @@ class App extends Component {
   }
 
   render() {  
+    const leftArrowPressed = "left";
+    const rightArrowPressed = "right";
+    const left = "<";
+    const right = ">";
+
     return (
       <div tabIndex="0" className="App" 
       onKeyDown={this.handleArrowKeys}
@@ -93,6 +97,9 @@ class App extends Component {
         {
           this.state.displayButton ? <StartGame /> : null 
         }
+
+        <button className="LeftButton" onClick={()=> {this.handleArrowKeys(leftArrowPressed)}}>{left}</button>
+        <button className="RightButton" onClick={()=> {this.handleArrowKeys(rightArrowPressed)}}>{right}</button>
 
         <div className="clouds">
           <Cloud cloudData={CloudData} left={this.state.left} />

@@ -31,3 +31,31 @@
     bottom: 174em;
     z-index: 2;
 }
+
+
+.LeftButton {
+    width: 20%;
+    height: 18%;
+    position: absolute;
+    top: 79%;
+    left: 0%; 
+    z-index: 1000;
+    background-color: transparent;
+    border: none;
+    font-size: 5em;
+    background-color: lightgrey;
+    opacity: .6;
+}
+.RightButton {
+    width: 20%;
+    height: 18%;
+    position: absolute;
+    top: 79%;
+    left: 79%;
+    z-index: 1000;
+    background-color: transparent;
+    border: none;
+    font-size: 5em;
+    background-color: lightgrey;
+    opacity: .6;
+}

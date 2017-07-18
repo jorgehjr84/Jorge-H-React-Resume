@@ -3,7 +3,6 @@ import './Character.css';
 
 class Character extends Component {   
     render() {
-        console.log(this.props.character, ';;;;;')
         return (
             <div>
                 {

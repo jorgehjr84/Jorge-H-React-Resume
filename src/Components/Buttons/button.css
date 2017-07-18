@@ -1,0 +1,27 @@
+.LeftButton {
+    background: url('../../assets/left-button.png') no-repeat;
+    width: 19%;
+    height: 11%;
+    position: absolute;
+    top: 62%;
+    left: 0%;
+    background-size: 4em;
+}
+.RightButton {
+    background: url('../../assets/right-button.png') no-repeat;
+    width: 19%;
+    height: 11%;
+    position: absolute;
+    top: 62%;
+    left: 79%;
+    background-size: 4em;
+}
+
+@media (min-width: 768px) {
+    .RightButton {
+        display: none;
+    }
+    .LeftButton {
+        display: none;
+    }
+}

@@ -1,9 +1,14 @@
 .Trees {
+    position: fixed !important;
+    bottom: -11em;
+}
+.Tree {
      background: url('../../assets/trees.png') no-repeat;
      display: inline-block;
      height: 10em;
-     position: relative;
+     position: absolute;
      width: 12em;
      bottom: 11em;
      z-index: 2;
+
 }

@@ -4,7 +4,7 @@ import './Mountains.css';
 class Mountains extends Component {   
     render() {
         return (
-            <div className="Mountains"
+            <div className="Mountain"
             style={{left: this.props.left + 'em'}}>
 
             </div>

@@ -2,9 +2,9 @@
     background: url('../../assets/city.png') no-repeat;
     display: inline-block;
     height: 37em;
-    position: relative;
+    position: fixed;
     width: 50em;
-    bottom: 143em;
+    bottom: -1em;
     z-index: 1;
     background-size: 45em;
 }

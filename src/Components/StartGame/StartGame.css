@@ -6,6 +6,7 @@
     margin-right: auto;
     top: 17em;
     opacity: .4;
+    z-index: 2;
 }
 
 button {

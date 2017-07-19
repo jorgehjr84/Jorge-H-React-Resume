@@ -18,8 +18,8 @@
   position: relative;
 }
 .experience-signs {
-  position: relative;
-  bottom: 122em;
+  position: fixed;
+  width: 400%;
 }
 .low-mountains {
   bottom: 76em !important;
@@ -31,6 +31,12 @@
     width: 675%;
     bottom: 174em;
     z-index: 2;
+}
+
+.Mountains {
+  position: fixed;
+  bottom: 0em;
+  height: 25em;
 }
 
 

@@ -24,9 +24,9 @@ class App extends Component {
       randoCloud1: 10,
       randoCloud2: 10,
       signLeft : 90,
-      experienceSignLeft: 120,  //Moves Clouds Right
+      experienceSignLeft: 108,  //Moves Clouds Right
       signTop: 2,
-      plane1: 130,
+      plane1: 108,
       plane2: 400,
       city: 280,
       characterLeft: 10,
@@ -114,10 +114,12 @@ class App extends Component {
         <Character left={this.state.characterLeft + 1} character={this.state.characterFacingRight}
         />
         <Trees treeData={TreeData} treeLeft={this.state.treesLeft}/>
-        <Mountains left={this.state.mountainsLeft}/>
-        <Mountains left={this.state.mountainsLeft + 40}/>
-        <Mountains left={this.state.mountainsLeft + 90}/>
-        <Mountains left={this.state.mountainsLeft + 160}/>
+        <div className="Mountains">
+          <Mountains left={this.state.mountainsLeft}/>
+          <Mountains left={this.state.mountainsLeft + 40}/>
+          <Mountains left={this.state.mountainsLeft + 90}/>
+          <Mountains left={this.state.mountainsLeft + 160}/>
+        </div>
           
         <div className="experience-signs">
           <Sign2 

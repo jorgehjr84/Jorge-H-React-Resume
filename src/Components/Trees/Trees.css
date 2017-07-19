@@ -1,6 +1,7 @@
 .Trees {
     position: fixed !important;
     bottom: -11em;
+    z-index: 1;
 }
 .Tree {
      background: url('../../assets/trees.png') no-repeat;
@@ -10,5 +11,4 @@
      width: 12em;
      bottom: 11em;
      z-index: 2;
-
 }

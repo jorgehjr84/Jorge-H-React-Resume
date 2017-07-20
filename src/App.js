@@ -21,14 +21,14 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      left : 1,  //Moves Clouds Right
+      left : 1,
       top: 2,
       randoCloud1: 10,
       randoCloud2: 10,
       signLeft : 90,
-      experienceSignLeft: 108,  //Moves Clouds Right
+      experienceSignLeft: 108,
       signTop: 2,
-      plane: 108,
+      plane: 140,
       city: 280,
       characterLeft: 10,
       characterFacingRight: true, 
@@ -53,8 +53,7 @@ class App extends Component {
         characterLeft: this.state.characterLeft + 3,
         characterFacingRight: true ,
         treesLeft: this.state.treesLeft - 2,
-        plane1: this.state.plane1 - 2,
-        plane2: this.state.plane2 - 2,
+        plane: this.state.plane - 2,
         city: this.state.city - 2,
         mountainsLeft: this.state.mountainsLeft - 2,
         caption: this.state.caption -2
@@ -69,8 +68,7 @@ class App extends Component {
         characterLeft : this.state.characterLeft - 3,
         characterFacingRight: false,
         treesLeft: this.state.treesLeft + 2,
-        plane1: this.state.plane1 + 2,
-        plane2: this.state.plane2 + 2,
+        plane: this.state.plane + 2,
         city: this.state.city + 2,
         mountainsLeft: this.state.mountainsLeft + 2,
         caption: this.state.caption + 2
@@ -114,14 +112,13 @@ class App extends Component {
         </div>
  
         <div id="contact-sign-container" className="component-container">
-          <ContactSign left={this.state.signLeft + 1}/>          
+          <ContactSign left={this.state.signLeft + 20}/>          
         </div>
-          
-                    {/*         
-                            <div id="plane-container" className="component-container">
-                              <Plane left={this.state.plane }/>            
-                            </div>  
-                             */}
+    
+        <div id="plane-container" className="component-container">
+          <Plane left={this.state.plane }/>            
+        </div>  
+                             
           
           
           {/* 

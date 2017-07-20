@@ -1,16 +1,9 @@
-/* .Plane {
-    position: fixed;
-    bottom: 29em;
-    height: 6em;
-}
-
-.Plane1 {
+.Plane {
     background: url('../../assets/experience-plane.png') no-repeat;
-    height: 6em;
     position: absolute;
-    width: 35em;    
-    z-index: 1;
-    background-size: 29em;
+    width: 351px;
+    height: 66px;
+    background-size: 338px;
+    bottom: 72%;
+    z-index: 4;
 }
-
- */

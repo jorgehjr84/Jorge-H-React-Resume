@@ -29,7 +29,7 @@ class App extends Component {
       experienceSignLeft: 108,
       signTop: 2,
       plane: 140,
-      city: 280,
+      city: 300,
       characterLeft: 10,
       characterFacingRight: true, 
       treesLeft: 10,
@@ -123,19 +123,20 @@ class App extends Component {
         <div id="experience-signs-container" className="component-container">
           <ExperienceSign experienceSignData={ExperienceSignData} experienceSignLeft={this.state.experienceSignLeft}/>            
         </div>
-                  
-                  
-                  {/* <div id="city-container" className="component-container">
-                    <City left={this.state.city }/>            
-                  </div>   */}
-          {/* 
-                  <div id="captions-container" 
-                  className="component-container" 
-                  style={{left: this.state.caption + 'em'}}>
-                    <Caption caption="to be continued......" />
-                    <Caption caption="what are you still doing here?" />
-                    <Caption caption="no seriourly, turn around, there's nothing else to see" />
-                  </div> */}
+        
+        <div id="city-container" className="component-container">
+          <City left={this.state.city }/>            
+        </div>
+
+        <div id="captions-container" 
+        className="component-container" 
+        style={{left: this.state.caption + 'em'}}>
+          <Caption caption="to be continued......" left={0}/>
+          <Caption caption="what are you still doing here?" left={1500}/>
+          <Caption caption="no seriourly, turn around, there's nothing else to see" left={3000}/>
+        </div>
+
+
         {/* <div className="component-container" id="button-container">
           <button className="LeftButton" onClick={()=> {this.handleArrowKeys(leftArrowPressed)}}>{left}</button>
           <button className="RightButton" onClick={()=> {this.handleArrowKeys(rightArrowPressed)}}>{right}</button>

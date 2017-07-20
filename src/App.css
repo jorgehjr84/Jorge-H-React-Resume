@@ -45,6 +45,14 @@
   padding-top: 3%;
 }
 
+#city-container {
+  width: 2000%;
+}
+
+#captions-container {
+  width: 2000%;
+}
+
 /* .signs {
   width: 2000%;
   position: relative;

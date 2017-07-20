@@ -3,7 +3,7 @@ import './App.css';
 
 import Cloud from './Components/Cloud/Cloud';
 import StartGame from './Components/StartGame/StartGame';
-import Sign1 from './Components/Signs/Sign1';
+import ContactSign from './Components/Signs/ContactSign';
 import ExperienceSign from './Components/Signs/ExperienceSign';
 import Character from './Components/Character/Character';
 import Trees from './Components/Trees/Trees';
@@ -112,13 +112,16 @@ class App extends Component {
         <div id="mountain-container" className="component-container">
           < Mountains mountainData={MountainData} mountainLeft={this.state.mountainsLeft}/>          
         </div>
-            
-
+ 
+        <div id="contact-sign-container" className="component-container">
+          <ContactSign left={this.state.signLeft + 1}/>          
+        </div>
           
-                  {/* <div id="sign-container" className="component-container">
-                      <Sign1 left={this.state.signLeft + 1} top={this.state.signTop}/>          
-                  </div> */}
-          
+                    {/*         
+                            <div id="plane-container" className="component-container">
+                              <Plane left={this.state.plane }/>            
+                            </div>  
+                             */}
           
           
           {/* 
@@ -126,11 +129,6 @@ class App extends Component {
                     <ExperienceSign experienceSignData={ExperienceSignData} experienceSignLeft={this.state.experienceSignLeft}/>            
                   </div>   */}
                   
-          {/*         
-                  <div id="plane-container" className="component-container">
-                    <Plane left={this.state.plane }/>            
-                  </div>  
-                   */}
                   
                   {/* <div id="city-container" className="component-container">
                     <City left={this.state.city }/>            

@@ -1,44 +1,42 @@
-/* .Sign {
+.ContactSign {
     background-color: #ecf0f1;
     border: 2px solid #d35400;
     border-radius: 2em;
-    display: inline-block;
-    height: 26em;
     position: absolute;
-    width: 31em;
-    z-index: 100;
+    width: 334px;
+    height: 405px;
+    bottom: 27%;
+    z-index: 3;
 }
-.sign1-header {
-    width: 50%;
+.contact-sign-header {
     color: #2c3e50;
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: -12px;
     text-align: center;
+    font-size: 1.5em;
 }
-.sign1-ul {
+.contact-sign-ul {
     border-top: 4px dotted grey;
-    width: 65%;
+    width: 243px;
     position: relative;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    padding: 0; 
-    padding-top: 1em;
+    padding-left: 0;
 }
-.sign1-l1 {
+.contact-sign-l1 {
     list-style: none;
-    margin-top: 1em;
+    margin-top: 8%;
     width: 100%;
 }
-.sign1-l1 a {
+.contact-sign-l1 a {
     text-decoration: none;
     color: #2c3e50;
 }
 
 
-.Sign2-container {
+/* .Sign2-container {
     background-color: #ecf0f1;
     border: 2px solid #d35400;
     border-radius: 2em;

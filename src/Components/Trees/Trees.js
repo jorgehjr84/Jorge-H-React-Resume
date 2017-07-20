@@ -11,7 +11,7 @@ class Trees extends Component {
             )    
         })
         return (
-            <div className="Trees">
+            <div>
                 {trees}
             </div>
         );

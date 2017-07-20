@@ -4,7 +4,7 @@ import './App.css';
 import Cloud from './Components/Cloud/Cloud';
 import StartGame from './Components/StartGame/StartGame';
 import Sign1 from './Components/Signs/Sign1';
-import Sign2 from './Components/Signs/Sign2';
+import ExperienceSign from './Components/Signs/ExperienceSign';
 import Character from './Components/Character/Character';
 import Trees from './Components/Trees/Trees';
 import Mountains from './Components/Mountains/Mountains';
@@ -12,8 +12,10 @@ import Plane1 from './Components/Planes/Plane1';
 import City from './Components/City/City';
 import Caption from './Components/Caption/Caption';
 
-import CloudData from './CloudData';
-import TreeData from './TreeData';
+import CloudData from './Data/CloudData';
+import TreeData from './Data/TreeData';
+import MountainData from './Data/MountainData';
+import ExperienceSignData from './Data/ExperienceSignData';
 
 class App extends Component {
   constructor() {
@@ -93,33 +95,43 @@ class App extends Component {
       <div tabIndex="0" className="App" 
       onKeyDown={this.handleArrowKeys}
       onClick={this.removeButton}>
-        
         {
           this.state.displayButton ? <StartGame /> : null 
         }
-
-        <button 
-        className="LeftButton" onClick={()=> {this.handleArrowKeys(leftArrowPressed)}}>{left}</button>
-        <button className="RightButton" onClick={()=> {this.handleArrowKeys(rightArrowPressed)}}>{right}</button>
-
         <div className="clouds">
-          <Cloud cloudData={CloudData} left={this.state.left} />
+         <Cloud cloudData={CloudData} left={this.state.left} />
         </div>
-        <div className="signs">
-          <Sign1 
-          left={this.state.signLeft + 1} 
-          top={this.state.signTop}
-          />          
-        </div>
-        <Character left={this.state.characterLeft + 1} character={this.state.characterFacingRight}
-        />
-        <Trees treeData={TreeData} treeLeft={this.state.treesLeft}/>
-        <div className="Mountains">
-          <Mountains left={this.state.mountainsLeft}/>
-          <Mountains left={this.state.mountainsLeft + 40}/>
-          <Mountains left={this.state.mountainsLeft + 90}/>
-          <Mountains left={this.state.mountainsLeft + 160}/>
-        </div>
+
+        {/* <div className="component-container" id="button-container">
+          <button className="LeftButton" onClick={()=> {this.handleArrowKeys(leftArrowPressed)}}>{left}</button>
+          <button className="RightButton" onClick={()=> {this.handleArrowKeys(rightArrowPressed)}}>{right}</button>
+        </div> */}
+
+        {/* <div id="sign-container" className="component-container">
+            <Sign1 left={this.state.signLeft + 1} top={this.state.signTop}/>          
+        </div> */}
+
+        {/* <div id="character-container" className="component-container">
+          <Character left={this.state.characterLeft + 1} character={this.state.characterFacingRight}/>          
+        </div> */}
+
+
+
+        {/* <div id="tree-container" className="component-container">
+          <Trees treeData={TreeData} treeLeft={this.state.treesLeft}/>  
+        </div> */}
+          
+        {/* <div id="mountain-container" className="component-container">
+          <Mountains mountainData={MountainData} mountainLeft={this.state.mountainsLeft}/>          
+        </div>   */}
+
+        <div id="experience-signs-container" className="component-container">
+        <ExperienceSign experienceSignData={ExperienceSignData} experienceSignLeft={this.state.experienceSignLeft}/>            
+        </div>  
+
+
+        {/* 
+      
           
         <div className="experience-signs">
           <Sign2 
@@ -169,8 +181,8 @@ class App extends Component {
         style={{left: this.state.caption + 'em'}}>
           <Caption caption="to be continued......" />
           <Caption caption="what are you still doing here?" />
-          <Caption caption="no seriourly, turn around, there's nothing else to see" />
-        </div>
+          <Caption caption="no seriourly, turn around, there's nothing else to see" /> */}
+        {/* </div> */}
       </div>
     );
   } 

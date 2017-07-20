@@ -3,10 +3,17 @@ import './Mountains.css';
 
 class Mountains extends Component {   
     render() {
-        return (
-            <div className="Mountain"
-            style={{left: this.props.left + 'em'}}>
+        const mountains = this.props.mountainData.map((mountain, i) => {
+            return (
+                <div key={i} className="Mountain"
+                    style={{left: this.props.mountainData[i].left + this.props.mountainLeft + 'em'}}>
+                </div>    
+            )    
+        })
 
+        return (
+            <div>
+                {mountains}
             </div>
         );
     } 

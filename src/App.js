@@ -136,12 +136,10 @@ class App extends Component {
           <Caption caption="no seriourly, turn around, there's nothing else to see" left={3000}/>
         </div>
 
-
-        {/* <div className="component-container" id="button-container">
+        <div id="button-container">
           <button className="LeftButton" onClick={()=> {this.handleArrowKeys(leftArrowPressed)}}>{left}</button>
           <button className="RightButton" onClick={()=> {this.handleArrowKeys(rightArrowPressed)}}>{right}</button>
-        </div> */}
-          
+        </div>
       </div>
     );
   } 

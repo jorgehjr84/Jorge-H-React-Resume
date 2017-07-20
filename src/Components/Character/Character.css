@@ -1,20 +1,19 @@
-/* .Character-right {
+.character{
+    height: 100%;
+}
+.Character-right {
     background: url('../../assets/character-right.png') no-repeat;
-    background-size: 4em;
-    width: 19%;
-    height: 11em;
-    position: fixed;
-    display: inline-block;
-    bottom: -1.4em;
-    z-index: 300;
+    position: absolute;
+    width: 68px;
+    height: 144px;
+    background-size: 60px;
+    bottom: 0;
 }
 .Character-left {
     background: url('../../assets/character-left.png') no-repeat;
-    background-size: 4em;
-    width: 19%;
-    height: 11em;
-    position: fixed;
-    display: inline-block;
-    bottom: -1.4em;
-    z-index: 300;
-} */
+    position: absolute;
+    width: 68px;
+    height: 144px;
+    background-size: 60px;
+    bottom: 0;
+}

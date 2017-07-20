@@ -4,7 +4,7 @@ import './Character.css';
 class Character extends Component {   
     render() {
         return (
-            <div>
+            <div className="character">
                 {
                     this.props.character
                     ? <div className="Character-right"

@@ -8,7 +8,7 @@ import ExperienceSign from './Components/Signs/ExperienceSign';
 import Character from './Components/Character/Character';
 import Trees from './Components/Trees/Trees';
 import Mountains from './Components/Mountains/Mountains';
-import Plane1 from './Components/Planes/Plane1';
+import Plane from './Components/Plane/Plane';
 import City from './Components/City/City';
 import Caption from './Components/Caption/Caption';
 
@@ -28,8 +28,7 @@ class App extends Component {
       signLeft : 90,
       experienceSignLeft: 108,  //Moves Clouds Right
       signTop: 2,
-      plane1: 108,
-      plane2: 400,
+      plane: 108,
       city: 280,
       characterLeft: 10,
       characterFacingRight: true, 
@@ -101,7 +100,10 @@ class App extends Component {
         <div className="clouds">
          <Cloud cloudData={CloudData} left={this.state.left} />
         </div>
-
+        
+        <div id="character-container" className="component-container">
+          <Character left={this.state.characterLeft + 1} character={this.state.characterFacingRight}/>          
+        </div>
         {/* <div className="component-container" id="button-container">
           <button className="LeftButton" onClick={()=> {this.handleArrowKeys(leftArrowPressed)}}>{left}</button>
           <button className="RightButton" onClick={()=> {this.handleArrowKeys(rightArrowPressed)}}>{right}</button>
@@ -109,10 +111,6 @@ class App extends Component {
 
         {/* <div id="sign-container" className="component-container">
             <Sign1 left={this.state.signLeft + 1} top={this.state.signTop}/>          
-        </div> */}
-
-        {/* <div id="character-container" className="component-container">
-          <Character left={this.state.characterLeft + 1} character={this.state.characterFacingRight}/>          
         </div> */}
 
 
@@ -124,65 +122,29 @@ class App extends Component {
         {/* <div id="mountain-container" className="component-container">
           <Mountains mountainData={MountainData} mountainLeft={this.state.mountainsLeft}/>          
         </div>   */}
-
+{/* 
         <div id="experience-signs-container" className="component-container">
-        <ExperienceSign experienceSignData={ExperienceSignData} experienceSignLeft={this.state.experienceSignLeft}/>            
+          <ExperienceSign experienceSignData={ExperienceSignData} experienceSignLeft={this.state.experienceSignLeft}/>            
+        </div>   */}
+        
+{/*         
+        <div id="plane-container" className="component-container">
+          <Plane left={this.state.plane }/>            
         </div>  
-
-
-        {/* 
-      
-          
-        <div className="experience-signs">
-          <Sign2 
-          header="Cubic Corporation" 
-          title="Software Engineer" 
-          date="June 2017 - Present"
-          skill1="React JS" 
-          skill2="Node JS" 
-          skill3="HTML" 
-          skill4="CSS" 
-          left={this.state.experienceSignLeft + 130}
-          />
-          <Sign2 
-          header="Medullan" 
-          title="Assoc. Software Developer" 
-          date="April 2016 - June 2017" 
-          skill1="Android and iOS Development" 
-          skill2="Angular JS" 
-          skill3="Node JS" 
-          skill4="Amazon Echo Skillskit"
-          left={this.state.experienceSignLeft + 145}
-          />
-          <Sign2 
-          header="Freelance" 
-          title="Web Developer" 
-          date="November 2015 - Present" 
-          skill1="Angular JS" 
-          skill2="HTML" 
-          skill3="CSS" 
-          skill4="Jquery"
-          left={this.state.experienceSignLeft + 160}
-          />
-          <Sign2 
-          header="LAV Productions LLC" 
-          title="Owner" 
-          date="August 2008 - Present" 
-          skill1="Leadership Skills" 
-          skill2="Communication" 
-          skill3="Invoicing" 
-          skill4="Client Relations"
-          left={this.state.experienceSignLeft + 175}
-          />
-        </div>
-        <Plane1 left={this.state.plane1 }/>
-        <City left={this.state.city }/>
-        <div className="captions-container"
+         */}
+        
+        {/* <div id="city-container" className="component-container">
+          <City left={this.state.city }/>            
+        </div>   */}
+{/* 
+        <div id="captions-container" 
+        className="component-container" 
         style={{left: this.state.caption + 'em'}}>
           <Caption caption="to be continued......" />
           <Caption caption="what are you still doing here?" />
-          <Caption caption="no seriourly, turn around, there's nothing else to see" /> */}
-        {/* </div> */}
+          <Caption caption="no seriourly, turn around, there's nothing else to see" />
+        </div> */}
+          
       </div>
     );
   } 

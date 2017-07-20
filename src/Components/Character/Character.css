@@ -8,6 +8,7 @@
     height: 144px;
     background-size: 60px;
     bottom: 0;
+    z-index: 4;
 }
 .Character-left {
     background: url('../../assets/character-left.png') no-repeat;
@@ -16,4 +17,5 @@
     height: 144px;
     background-size: 60px;
     bottom: 0;
+    z-index: 4;
 }

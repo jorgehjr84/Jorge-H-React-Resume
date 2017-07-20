@@ -104,6 +104,12 @@ class App extends Component {
         <div id="character-container" className="component-container">
           <Character left={this.state.characterLeft + 1} character={this.state.characterFacingRight}/>          
         </div>
+          
+        <div id="tree-container" className="component-container">
+          <Trees treeData={TreeData} treeLeft={this.state.treesLeft}/>  
+        </div>
+            
+
         {/* <div className="component-container" id="button-container">
           <button className="LeftButton" onClick={()=> {this.handleArrowKeys(leftArrowPressed)}}>{left}</button>
           <button className="RightButton" onClick={()=> {this.handleArrowKeys(rightArrowPressed)}}>{right}</button>
@@ -115,10 +121,6 @@ class App extends Component {
 
 
 
-        {/* <div id="tree-container" className="component-container">
-          <Trees treeData={TreeData} treeLeft={this.state.treesLeft}/>  
-        </div> */}
-          
         {/* <div id="mountain-container" className="component-container">
           <Mountains mountainData={MountainData} mountainLeft={this.state.mountainsLeft}/>          
         </div>   */}

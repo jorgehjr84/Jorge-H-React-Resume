@@ -40,6 +40,11 @@
   width: 2000%;
 }
 
+#experience-signs-container {
+  width: 2000%;
+  padding-top: 3%;
+}
+
 /* .signs {
   width: 2000%;
   position: relative;

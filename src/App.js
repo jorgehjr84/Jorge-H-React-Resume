@@ -118,13 +118,11 @@ class App extends Component {
         <div id="plane-container" className="component-container">
           <Plane left={this.state.plane }/>            
         </div>  
-                             
-          
-          
-          {/* 
-                  <div id="experience-signs-container" className="component-container">
-                    <ExperienceSign experienceSignData={ExperienceSignData} experienceSignLeft={this.state.experienceSignLeft}/>            
-                  </div>   */}
+
+
+        <div id="experience-signs-container" className="component-container">
+          <ExperienceSign experienceSignData={ExperienceSignData} experienceSignLeft={this.state.experienceSignLeft}/>            
+        </div>
                   
                   
                   {/* <div id="city-container" className="component-container">

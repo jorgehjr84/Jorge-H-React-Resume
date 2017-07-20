@@ -36,42 +36,50 @@
 }
 
 
-/* .Sign2-container {
+.ExperienceSign {
     background-color: #ecf0f1;
     border: 2px solid #d35400;
     border-radius: 2em;
-    display: inline-block;
-    height: 26em;
     position: relative;
-    width: 20em;
-    z-index: 100;
-    margin-right: 6em;
-}
-
-.Sign2 {
+    width: 357px;
+    height: 405px;
+    bottom: 27%;
+    z-index: 3;
     display: inline-block;
-    height: 28em;
-    position: relative;
-    width: 22em;
-    z-index: 100;
-    background-size: 35em;
-    text-align: center;
-    background-color: #ecf0f1;
-    border: 2px solid #d35400;
-    border-radius: 2em;
 }
-.Sign2 h4 {
-    border-top: 4px dotted lightgray;
-    width: 90%;
+.ExperienceSign h1 {
+   color: #2c3e50;
+    position: relative;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 1em;
+    text-align: center;
 }
-.Sign2 ul {
+.ExperienceSign h2 {
+   color: #2c3e50;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.ExperienceSign h4 {
+   color: #2c3e50;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 1.5em;
+}
+.ExperienceSign ul {
+    border-top: 4px dotted grey;
+    width: 243px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
     padding-left: 0;
-    margin-top: 1em;
 }
-.Sign2 li {
-    margin-bottom: 1em;
+.ExperienceSign li {
     list-style: none;
-} */
+    margin-top: 8%;
+    width: 100%;
+}

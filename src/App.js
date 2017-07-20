@@ -108,43 +108,44 @@ class App extends Component {
         <div id="tree-container" className="component-container">
           <Trees treeData={TreeData} treeLeft={this.state.treesLeft}/>  
         </div>
+        
+        <div id="mountain-container" className="component-container">
+          < Mountains mountainData={MountainData} mountainLeft={this.state.mountainsLeft}/>          
+        </div>
             
 
+          
+                  {/* <div id="sign-container" className="component-container">
+                      <Sign1 left={this.state.signLeft + 1} top={this.state.signTop}/>          
+                  </div> */}
+          
+          
+          
+          {/* 
+                  <div id="experience-signs-container" className="component-container">
+                    <ExperienceSign experienceSignData={ExperienceSignData} experienceSignLeft={this.state.experienceSignLeft}/>            
+                  </div>   */}
+                  
+          {/*         
+                  <div id="plane-container" className="component-container">
+                    <Plane left={this.state.plane }/>            
+                  </div>  
+                   */}
+                  
+                  {/* <div id="city-container" className="component-container">
+                    <City left={this.state.city }/>            
+                  </div>   */}
+          {/* 
+                  <div id="captions-container" 
+                  className="component-container" 
+                  style={{left: this.state.caption + 'em'}}>
+                    <Caption caption="to be continued......" />
+                    <Caption caption="what are you still doing here?" />
+                    <Caption caption="no seriourly, turn around, there's nothing else to see" />
+                  </div> */}
         {/* <div className="component-container" id="button-container">
           <button className="LeftButton" onClick={()=> {this.handleArrowKeys(leftArrowPressed)}}>{left}</button>
           <button className="RightButton" onClick={()=> {this.handleArrowKeys(rightArrowPressed)}}>{right}</button>
-        </div> */}
-
-        {/* <div id="sign-container" className="component-container">
-            <Sign1 left={this.state.signLeft + 1} top={this.state.signTop}/>          
-        </div> */}
-
-
-
-        {/* <div id="mountain-container" className="component-container">
-          <Mountains mountainData={MountainData} mountainLeft={this.state.mountainsLeft}/>          
-        </div>   */}
-{/* 
-        <div id="experience-signs-container" className="component-container">
-          <ExperienceSign experienceSignData={ExperienceSignData} experienceSignLeft={this.state.experienceSignLeft}/>            
-        </div>   */}
-        
-{/*         
-        <div id="plane-container" className="component-container">
-          <Plane left={this.state.plane }/>            
-        </div>  
-         */}
-        
-        {/* <div id="city-container" className="component-container">
-          <City left={this.state.city }/>            
-        </div>   */}
-{/* 
-        <div id="captions-container" 
-        className="component-container" 
-        style={{left: this.state.caption + 'em'}}>
-          <Caption caption="to be continued......" />
-          <Caption caption="what are you still doing here?" />
-          <Caption caption="no seriourly, turn around, there's nothing else to see" />
         </div> */}
           
       </div>

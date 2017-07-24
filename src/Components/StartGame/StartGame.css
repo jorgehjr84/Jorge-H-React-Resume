@@ -20,3 +20,9 @@ button {
     cursor: pointer;
     position: absolute;
 }
+
+@media (max-width: 658px){
+    .StartGame {
+        width: 35%;
+    }
+}

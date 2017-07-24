@@ -21,8 +21,10 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      cloudLeft : 1,
+      left : 1,
       top: 2,
+      randoCloud1: 10,
+      randoCloud2: 10,
       signLeft : 90,
       experienceSignLeft: 108,
       signTop: 2,
@@ -47,7 +49,9 @@ class App extends Component {
   handleArrowKeys(e) {
     if(e.key === 'ArrowRight' || e === 'right') {
       this.setState({
-        cloudLeft: this.state.cloudLeft - 1,
+        left: this.state.left - 1,
+        randoCloud1: this.state.randoCloud1 - 5,
+        randoCloud2: this.state.randoCloud2 - 5,
         signLeft: this.state.signLeft - 3,
         experienceSignLeft: this.state.experienceSignLeft - 3,
         characterLeft: this.state.characterLeft + 3,
@@ -60,9 +64,12 @@ class App extends Component {
       })
     } else if (e.key === 'ArrowLeft' || e === 'left') {
       this.setState({
-        cloudLeft: this.state.cloudLeft + 1,
+        left: this.state.left + 1,
+        randoCloud1: this.state.randoCloud1 + 5,
+        randoCloud2: this.state.randoCloud2 + 5,
         signLeft: this.state.signLeft + 3,
         experienceSignLeft: this.state.experienceSignLeft + 3,
+        characterLeft : this.state.characterLeft - 3,
         characterFacingRight: false,
         treesLeft: this.state.treesLeft + 2,
         plane: this.state.plane + 2,
@@ -78,6 +85,8 @@ class App extends Component {
       displayButton: false
     })
   }
+
+  
   
   handleTouchStarted(e) {
     this.setState({
@@ -86,46 +95,31 @@ class App extends Component {
   }
   
   handleTouchMoved(e) {
-    var change = this.state.startingX - e.changedTouches[0].clientX
     var touch = e.touches[0]
-
     this.setState({
       change: this.state.startingX - touch.clientX      
     })
     e.preventDefault(); 
-    if(change < 0) {
-      this.setState({
-        change: this.state.startingX - e.changedTouches[0].clientX,
-        cloudLeft: this.state.cloudLeft - (change / 50),
-        signLeft: this.state.signLeft - (change / 40),
-        experienceSignLeft: this.state.experienceSignLeft - (change / 40),
-        characterLeft: this.state.characterLeft + (change / 55),
-        characterFacingRight: false,
-        treesLeft: this.state.treesLeft - (change / 40),
-        plane: this.state.plane - (change / 40),
-        city: this.state.city - (change / 55),
-        mountainsLeft: this.state.mountainsLeft - (change / 40),
-        caption: this.state.caption - (change / 45),
-        })
-    } else {
-      this.setState({
-        change: this.state.startingX - e.changedTouches[0].clientX,
-        cloudLeft: this.state.cloudLeft - (change / 50),
-        signLeft: this.state.signLeft - (change / 40),
-        experienceSignLeft: this.state.experienceSignLeft - (change / 40),
-        characterLeft: this.state.characterLeft + (change / 55),
-        characterFacingRight: true ,
-        treesLeft: this.state.treesLeft - (change / 40),
-        plane: this.state.plane - (change / 40),
-        city: this.state.city - (change / 55),
-        mountainsLeft: this.state.mountainsLeft - (change / 40),
-        caption: this.state.caption - (change / 45)
-      })
-    }
   }
   
   handleTouchEnded(e) {
     var change = this.state.startingX - e.changedTouches[0].clientX
+    this.setState({
+      change: this.state.startingX - e.changedTouches[0].clientX,
+      left: this.state.left - 1,
+      randoCloud1: this.state.randoCloud1 - 5,
+      randoCloud2: this.state.randoCloud2 - 5,
+      signLeft: this.state.signLeft - 3,
+      experienceSignLeft: this.state.experienceSignLeft - 3,
+      characterLeft: this.state.characterLeft + 3,
+      characterFacingRight: true ,
+      treesLeft: this.state.treesLeft - 2,
+      plane: this.state.plane - 2,
+      city: this.state.city - 2,
+      mountainsLeft: this.state.mountainsLeft - 2,
+      caption: this.state.caption -2
+    })
+
   }
 
   render() {  
@@ -145,7 +139,7 @@ class App extends Component {
           this.state.displayButton ? <StartGame /> : null 
         }
         <div className="clouds">
-         <Cloud cloudData={CloudData} left={this.state.cloudLeft} />
+         <Cloud cloudData={CloudData} left={this.state.left} />
         </div>
         
         <div id="character-container" className="component-container">
@@ -184,6 +178,8 @@ class App extends Component {
           <Caption caption="what are you still doing here?" left={1500}/>
           <Caption caption="no seriourly, turn around, there's nothing else to see" left={3000}/>
         </div>
+
+     
       </div>
     );
   } 

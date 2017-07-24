@@ -41,11 +41,8 @@ class App extends Component {
     }
     this.handleArrowKeys = this.handleArrowKeys.bind(this);
     this.removeButton = this.removeButton.bind(this);
-    // this.updateCharacterPositionRight = this.updateCharacterPositionRight.bind(this);
-    // this.updateCharacterPositionLeft = this.updateCharacterPositionLeft.bind(this);
-    // this.updateCharacterPositionRight = this.updateCharacterPositionRight.bind(this);
-    // this.killMovementLeft = this.killMovementLeft.bind(this); 
-    // this.killMovementRight = this.killMovementRight.bind(this); 
+    this.updateCharacterPositionRight = this.updateCharacterPositionRight.bind(this);
+    this.updateCharacterPositionLeft = this.updateCharacterPositionLeft.bind(this);
     this.startFiring = this.startFiring.bind(this);
     this.stopFiring = this.stopFiring.bind(this);
   }
@@ -58,14 +55,13 @@ class App extends Component {
         randoCloud2: this.state.randoCloud2 - 5,
         signLeft: this.state.signLeft - 3,
         experienceSignLeft: this.state.experienceSignLeft - 3,
-        // characterLeft: this.state.characterLeft + 3,
+        characterLeft: this.state.characterLeft + 3,
         characterFacingRight: true ,
         treesLeft: this.state.treesLeft - 2,
         plane: this.state.plane - 2,
         city: this.state.city - 2,
         mountainsLeft: this.state.mountainsLeft - 2,
-        caption: this.state.caption -2,
-        // isMovingRight: true
+        caption: this.state.caption -2
       })
     } else if (e.key === 'ArrowLeft' || e === 'left') {
       this.setState({
@@ -74,14 +70,12 @@ class App extends Component {
         randoCloud2: this.state.randoCloud2 + 5,
         signLeft: this.state.signLeft + 3,
         experienceSignLeft: this.state.experienceSignLeft + 3,
-        // characterLeft : this.state.characterLeft - 3,
         characterFacingRight: false,
         treesLeft: this.state.treesLeft + 2,
         plane: this.state.plane + 2,
         city: this.state.city + 2,
         mountainsLeft: this.state.mountainsLeft + 2,
         caption: this.state.caption + 2,
-        // isMovingLeft: true
       })
     }
   }
@@ -92,37 +86,75 @@ class App extends Component {
     })
   }
 
-  startFiring() {
+  startFiring(e) {
     console.log("Firing")
-    this.setState({
-      isMovingRight: true
-    })
-    this.interval = setInterval(this.updateCharacterPositionRight, 100);
+    if(e === 'right') {
+      this.setState({
+        isMovingRight: true
+      })
+      this.interval = setInterval(this.updateCharacterPositionRight, 100);
+    } else {
+      this.setState({
+        isMovingLeft: true
+      })
+      this.interval = setInterval(this.updateCharacterPositionLeft, 100);
+    }
  }
 
-  stopFiring() {
+  stopFiring(e) {
     console.log("Stop")
-    this.setState({
-      isMovingRight: false
-    })
-    clearInterval(this.interval);  
- }
-
-  // updateCharacterPositionRight() {
-  //   console.log("Updating position")
-  //     this.setState({
-  //       characterLeft: + 3
-  //     })
-  // }
-
-  componentDidUpdate() {
-    const isMovingRight = this.state.isMovingRight;
-    if(!isMovingRight) {
-      console.log("Is not moving right");
+    if(e === 'right') {
+      this.setState({
+        isMovingRight: false
+      })
       clearInterval(this.interval);  
     } else {
-      console.log("Is moving right");
-      this.interval = setInterval(this.setState({characterLeft: this.state.characterLeft + 3}), 100);
+      this.setState({
+        isMovingLeft: false
+      })
+      clearInterval(this.interval);  
+    }
+ }
+
+  updateCharacterPositionRight() {
+    const isMovingRight = this.state.isMovingRight;
+    if(!isMovingRight) {
+      clearInterval(this.interval);  
+    } else {
+      this.interval = setInterval(this.setState({
+        left: this.state.left - 1,
+        randoCloud1: this.state.randoCloud1 - 5,
+        randoCloud2: this.state.randoCloud2 - 5,
+        signLeft: this.state.signLeft - 3,
+        experienceSignLeft: this.state.experienceSignLeft - 3,
+        characterFacingRight: true ,
+        treesLeft: this.state.treesLeft - 2,
+        plane: this.state.plane - 2,
+        city: this.state.city - 2,
+        mountainsLeft: this.state.mountainsLeft - 2,
+        caption: this.state.caption -2
+      }), 100);
+    }
+  }
+  
+  updateCharacterPositionLeft() {
+    const isMovingRight = this.state.isMovingRight;
+    if(!isMovingRight) {
+      clearInterval(this.interval);  
+    } else {
+      this.interval = setInterval(this.setState({
+        left: this.state.left + 1,
+        randoCloud1: this.state.randoCloud1 + 5,
+        randoCloud2: this.state.randoCloud2 + 5,
+        signLeft: this.state.signLeft + 3,
+        experienceSignLeft: this.state.experienceSignLeft + 3,
+        characterFacingRight: false,
+        treesLeft: this.state.treesLeft + 2,
+        plane: this.state.plane + 2,
+        city: this.state.city + 2,
+        mountainsLeft: this.state.mountainsLeft + 2,
+        caption: this.state.caption + 2,
+      }), 100);
     }
   }
 
@@ -183,14 +215,14 @@ class App extends Component {
         <div id="button-container" tabIndex="0">
           <button 
           className="LeftButton" 
-          onMouseDown={this.startFiring}
-          onMouseUp={this.stopFiring}
+          onMouseDown={this.startFiring.bind(null,'left')}
+          onMouseUp={this.stopFiring.bind(null, 'left')}
           >{left}</button>
           
           <button 
           className="RightButton" 
-          onMouseDown={this.startFiring}
-          onMouseUp={this.stopFiring}
+          onMouseDown={this.startFiring.bind(null, 'right')}
+          onMouseUp={this.stopFiring.bind(null, 'right')}
           >{right}</button>
         </div>
       </div>
@@ -199,23 +231,3 @@ class App extends Component {
 }
 
 export default App;
-
-
-// so think of it as a ~state machine~ deterministic finite automaton:
-// not shooting ---(DOWN)--->  fire events at 100ms intervals ---(UP)---> not shooting (edited)
-// plan: set up a method like `startFiring()` that calls `setInterval`
-// and a method like `stopFiring()` that cancels that interval
-// so now, when `onMouseDown` happens, the *only thing you do is set state*
-// you can `startFiring` in `componentDidUpdate`
-// (or `endFiring`, depending on the state, of course)
-// make sense?
-
-// componentDidUpdate() {
-//   const { isFiring } = this.state;
-
-//   if (!isFiring) {
-//     clearInterval(this.interval);
-//   else {
-//     this.interval = ...
-//   }
-// }

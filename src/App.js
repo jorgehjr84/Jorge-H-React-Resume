@@ -88,7 +88,6 @@ class App extends Component {
   handleTouchMoved(e) {
     var change = this.state.startingX - e.changedTouches[0].clientX
     var touch = e.touches[0]
-    console.log(change, "Changed")
 
     this.setState({
       change: this.state.startingX - touch.clientX      
@@ -97,16 +96,16 @@ class App extends Component {
     if(change < 0) {
       this.setState({
         change: this.state.startingX - e.changedTouches[0].clientX,
-        cloudLeft: this.state.cloudLeft + 1,
-        signLeft: this.state.signLeft + 3,
-        experienceSignLeft: this.state.experienceSignLeft + 3,
-        characterLeft: this.state.characterLeft - 20,
+        cloudLeft: this.state.cloudLeft - (change / 50),
+        signLeft: this.state.signLeft - (change / 40),
+        experienceSignLeft: this.state.experienceSignLeft - (change / 40),
+        characterLeft: this.state.characterLeft + (change / 55),
         characterFacingRight: false,
-        treesLeft: this.state.treesLeft + 2,
-        plane: this.state.plane + 2,
-        city: this.state.city + 2,
-        mountainsLeft: this.state.mountainsLeft + 2,
-        caption: this.state.caption + 2,
+        treesLeft: this.state.treesLeft - (change / 40),
+        plane: this.state.plane - (change / 40),
+        city: this.state.city - (change / 55),
+        mountainsLeft: this.state.mountainsLeft - (change / 40),
+        caption: this.state.caption - (change / 45),
         })
     } else {
       this.setState({

@@ -3,9 +3,8 @@ import './Character.css';
 
 class Character extends Component {   
     render() {
-        console.log(this.props.character, ';;;;;')
         return (
-            <div>
+            <div className="character">
                 {
                     this.props.character
                     ? <div className="Character-right"

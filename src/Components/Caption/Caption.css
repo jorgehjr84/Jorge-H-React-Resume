@@ -1,5 +1,15 @@
 .Caption {
-     display: inline-block;
-     margin-right: 25em;
-     font-size: 4em;
+   position: absolute;
+    width: 574px;
+    height: 56px;
+    background-size: 550px;
+    bottom: 48%;
+    z-index: 1;
+    font-size: 48px;
+}
+
+@media (max-width: 768px) {
+    .Caption {
+        font-size: 26px;
+    }
 }

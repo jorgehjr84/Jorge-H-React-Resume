@@ -1,10 +1,9 @@
-.Mountains {
+.Mountain {
     background: url('../../assets/mountains.png') no-repeat;
-    display: inline-block;
-    height: 28em;
-    position: relative;
-    width: 36em;
-    bottom: -2em;
+    position: absolute;
+    width: 554px;
+    height: 405px;
+    background-size: 550px;
+    bottom: 0;
     z-index: 1;
-    background-size: 35em;
-}
+} 

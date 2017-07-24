@@ -1,0 +1,10 @@
+.Plane {
+    background: url('../../assets/experience-plane.png') no-repeat;
+    position: absolute;
+    width: 351px;
+    height: 66px;
+    background-size: 338px;
+    bottom: 72%;
+    z-index: 4;
+    transition: all 150ms linear;
+}

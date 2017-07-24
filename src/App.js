@@ -36,10 +36,14 @@ class App extends Component {
       mountainsLeft: 10,
       caption: 440,
       displayButton: true,
-
+      startingX: 0,
+      change: 0
     }
     this.handleArrowKeys = this.handleArrowKeys.bind(this);
     this.removeButton = this.removeButton.bind(this);
+    this.handleTouchStarted = this.handleTouchStarted.bind(this);
+    this.handleTouchMoved = this.handleTouchMoved.bind(this);
+    this.handleTouchEnded = this.handleTouchEnded.bind(this);
   }
 
   handleArrowKeys(e) {
@@ -82,6 +86,42 @@ class App extends Component {
     })
   }
 
+  
+  
+  handleTouchStarted(e) {
+    this.setState({
+      startingX: e.touches[0].clientX
+    })
+  }
+  
+  handleTouchMoved(e) {
+    var touch = e.touches[0]
+    this.setState({
+      change: this.state.startingX - touch.clientX      
+    })
+    e.preventDefault(); 
+  }
+  
+  handleTouchEnded(e) {
+    var change = this.state.startingX - e.changedTouches[0].clientX
+    this.setState({
+      change: this.state.startingX - e.changedTouches[0].clientX,
+      left: this.state.left - 1,
+      randoCloud1: this.state.randoCloud1 - 5,
+      randoCloud2: this.state.randoCloud2 - 5,
+      signLeft: this.state.signLeft - 3,
+      experienceSignLeft: this.state.experienceSignLeft - 3,
+      characterLeft: this.state.characterLeft + 3,
+      characterFacingRight: true ,
+      treesLeft: this.state.treesLeft - 2,
+      plane: this.state.plane - 2,
+      city: this.state.city - 2,
+      mountainsLeft: this.state.mountainsLeft - 2,
+      caption: this.state.caption -2
+    })
+
+  }
+
   render() {  
     const leftArrowPressed = "left";
     const rightArrowPressed = "right";
@@ -91,7 +131,10 @@ class App extends Component {
     return (
       <div tabIndex="0" className="App" 
       onKeyDown={this.handleArrowKeys}
-      onClick={this.removeButton}>
+      onClick={this.removeButton}
+      onTouchStart={this.handleTouchStarted}
+      onTouchMove={this.handleTouchMoved}
+      onTouchEnd={this.handleTouchEnded}>
         {
           this.state.displayButton ? <StartGame /> : null 
         }
@@ -136,10 +179,7 @@ class App extends Component {
           <Caption caption="no seriourly, turn around, there's nothing else to see" left={3000}/>
         </div>
 
-        <div id="button-container">
-          <button className="LeftButton" onClick={()=> {this.handleArrowKeys(leftArrowPressed)}}>{left}</button>
-          <button className="RightButton" onClick={()=> {this.handleArrowKeys(rightArrowPressed)}}>{right}</button>
-        </div>
+     
       </div>
     );
   } 

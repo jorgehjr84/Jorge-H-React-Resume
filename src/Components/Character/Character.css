@@ -1,7 +1,7 @@
 .Character-right {
     background: url('../../assets/character-right.png') no-repeat;
     background-size: 4em;
-    width: 8%;
+    width: 22%;
     height: 11em;
     position: relative;
     display: inline-block;
@@ -10,7 +10,7 @@
 .Character-left {
     background: url('../../assets/character-left.png') no-repeat;
     background-size: 4em;
-    width: 8%;
+    width: 22%;
     height: 11em;
     position: relative;
     display: inline-block;

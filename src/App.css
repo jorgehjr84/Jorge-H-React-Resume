@@ -20,6 +20,13 @@
   position: relative;
   bottom: 122em;
 }
+.Mountains-container {
+    bottom: 0;
+    height: 27em;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+}
 .low-mountains {
   bottom: 76em !important;
 }

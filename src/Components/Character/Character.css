@@ -1,5 +1,6 @@
 .character{
     height: 100%;
+    transition: all .3s linear;
 }
 .Character-right {
     background: url('../../assets/character-right.png') no-repeat;

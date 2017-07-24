@@ -23,7 +23,7 @@ button {
 
 @media (max-width: 658px){
     .StartGame {
-        width: 35%;
+        width: 40%;
     }
     .desktop {
         display: none;

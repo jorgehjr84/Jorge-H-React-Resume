@@ -80,6 +80,7 @@ class App extends Component {
   }
   
   handleTouchStarted(e) {
+    this.removeButton();
     this.setState({
       startingX: e.touches[0].clientX
     })

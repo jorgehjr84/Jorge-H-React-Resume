@@ -7,6 +7,7 @@
     height: 405px;
     bottom: 27%;
     z-index: 3;
+    transition: all 150ms linear;
 }
 .contact-sign-header {
     color: #2c3e50;
@@ -46,6 +47,7 @@
     bottom: 27%;
     z-index: 3;
     display: inline-block;
+    transition: all 150ms linear;
 }
 .ExperienceSign h1 {
    color: #2c3e50;

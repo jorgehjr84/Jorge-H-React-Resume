@@ -73,6 +73,7 @@
     font-size: 5em;
     background-color: lightgrey;
     opacity: .6;
+    cursor: pointer;
 }
 .RightButton {
     width: 70px;
@@ -86,6 +87,7 @@
     font-size: 5em;
     background-color: lightgrey;
     opacity: .6;
+    cursor: pointer;
 }
 
 @media (min-width: 769px) {
@@ -115,3 +117,7 @@ $ipad-pro-landscape-breakpoint: "(min-device-width : 1024px) and (max-device-wid
   }
   // etc
 } */
+
+
+/*transition: all 150ms linear;*/
+

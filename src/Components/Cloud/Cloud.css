@@ -4,4 +4,5 @@
      height: 10em;
      position: relative;
      width: 12em;
+     transition: all 150ms linear;
 } 

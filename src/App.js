@@ -27,7 +27,7 @@ class App extends Component {
       experienceSignLeft: 108,
       signTop: 2,
       plane: 140,
-      city: 300,
+      city: 330,
       characterLeft: 10,
       characterFacingRight: true, 
       treesLeft: 10,

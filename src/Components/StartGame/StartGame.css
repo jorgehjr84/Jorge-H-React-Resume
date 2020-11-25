@@ -25,6 +25,9 @@ button {
     .StartGame {
         width: 40%;
     }
+    button {
+        padding-bottom: 10px;
+    }
     .desktop {
         display: none;
     }

@@ -1,0 +1,10 @@
+.Tree {
+    background: url('../../assets/trees.png') no-repeat;
+    position: absolute;
+    width: 186px;
+    height: 174px;
+    background-size: 176px;
+    bottom: 0;
+    z-index: 2;
+    transition: all 150ms linear;
+}

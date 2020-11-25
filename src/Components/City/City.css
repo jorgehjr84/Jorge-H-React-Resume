@@ -1,0 +1,18 @@
+.City {
+    background: url('../../assets/city.png') no-repeat;
+    position: absolute;
+    width: 554px;
+    height: 405px;
+    background-size: 550px;
+    bottom: 0;
+    z-index: 1;
+    transition: all 150ms linear;
+}
+
+@media (min-width: 769px) {
+    .City {
+    width: 700px;
+    height: 550px;
+    background-size: 700px;
+    }
+}

@@ -1,0 +1,10 @@
+.Mountain {
+    background: url('../../assets/mountains.png') no-repeat;
+    position: absolute;
+    width: 554px;
+    height: 405px;
+    background-size: 550px;
+    bottom: 0;
+    z-index: 1;
+    transition: all .3s linear;
+} 

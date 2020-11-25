@@ -1,0 +1,87 @@
+.ContactSign {
+    background-color: #ecf0f1;
+    border: 2px solid #d35400;
+    border-radius: 2em;
+    position: absolute;
+    width: 334px;
+    height: 405px;
+    bottom: 27%;
+    z-index: 3;
+    transition: all 150ms linear;
+}
+.contact-sign-header {
+    color: #2c3e50;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 1.5em;
+}
+.contact-sign-ul {
+    border-top: 4px dotted grey;
+    width: 243px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-left: 0;
+}
+.contact-sign-l1 {
+    list-style: none;
+    margin-top: 8%;
+    width: 100%;
+}
+.contact-sign-l1 a {
+    text-decoration: none;
+    color: #2c3e50;
+}
+
+
+.ExperienceSign {
+    background-color: #ecf0f1;
+    border: 2px solid #d35400;
+    border-radius: 2em;
+    position: relative;
+    width: 357px;
+    height: 405px;
+    bottom: 27%;
+    z-index: 3;
+    display: inline-block;
+    transition: all 150ms linear;
+}
+.ExperienceSign h1 {
+   color: #2c3e50;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.ExperienceSign h2 {
+   color: #2c3e50;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.ExperienceSign h4 {
+   color: #2c3e50;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 1.5em;
+}
+.ExperienceSign ul {
+    border-top: 4px dotted grey;
+    width: 243px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-left: 0;
+}
+.ExperienceSign li {
+    list-style: none;
+    margin-top: 8%;
+    width: 100%;
+}

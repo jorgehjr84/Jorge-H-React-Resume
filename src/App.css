@@ -1,24 +1,99 @@
 .App {
-  text-align: center;
+  background: url('./assets/background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center; 
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left:0;
+  overflow: hidden;
+  width: 100%;
+  transition: all .5s linear;
+}
+.component-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+}
+.clouds {
+  width: 2000%;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+#character-container {
+  width: 2000%;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+#tree-container {
+  width: 2000%;
 }
 
-.App-intro {
-  font-size: large;
+#mountain-container {
+  width: 2000%;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+#contact-sign-container {
+  width: 2000%;
+}
+
+#plane-container {
+  width: 2000%;
+}
+
+#experience-signs-container {
+  width: 2000%;
+  padding-top: 3%;
+}
+
+#city-container {
+  width: 2000%;
+}
+
+#captions-container {
+  width: 2000%;
+}
+
+#captions-container {
+  width: 2000%;
+}
+
+#button-container {
+  width: 100%;
+}
+
+.LeftButton {
+    width: 70px;
+    height: 18%;
+    position: absolute;
+    top: 79%;
+    left: 20px; 
+    z-index: 1000;
+    background-color: transparent;
+    border: none;
+    font-size: 5em;
+    background-color: lightgrey;
+    opacity: .6;
+}
+.RightButton {
+    width: 70px;
+    height: 18%;
+    position: absolute;
+    top: 79%;
+    right: 20px;
+    z-index: 1000;
+    background-color: transparent;
+    border: none;
+    font-size: 5em;
+    background-color: lightgrey;
+    opacity: .6;
+}
+
+@media (min-width: 769px) {
+  .RightButton {
+    display: none;
+  }
+  .LeftButton {
+    display: none;
+  }
 }

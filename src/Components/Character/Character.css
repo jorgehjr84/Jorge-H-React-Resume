@@ -1,0 +1,22 @@
+.character{
+    height: 100%;
+    transition: all .3s linear;
+}
+.Character-right {
+    background: url('../../assets/character-right.png') no-repeat;
+    position: absolute;
+    width: 68px;
+    height: 144px;
+    background-size: 60px;
+    bottom: 0;
+    z-index: 4;
+}
+.Character-left {
+    background: url('../../assets/character-left.png') no-repeat;
+    position: absolute;
+    width: 68px;
+    height: 144px;
+    background-size: 60px;
+    bottom: 0;
+    z-index: 4;
+}
